@@ -1,0 +1,92 @@
+* {
+    margin: 0%;
+    padding: 0;
+}
+
+html{
+    background-color: aliceblue;
+}
+
+/*Header*/
+header{
+    background-color: black;
+    
+}
+
+.titulo{
+    font-size: 38px;
+    color: yellow;
+    display: flex;
+    justify-content: center;
+}
+
+.barra_tag{
+ display: flex;
+ justify-content: space-around;
+}
+
+.tag{
+    font-size: 20px;
+    color: yellow;
+    list-style: none;
+}
+.boton_tag{
+    background-color: darkgoldenrod;
+    width: 200px;
+    border-radius: 30%;
+    margin-bottom: 5px;
+}
+
+/*Main*/
+.subtitulo{
+    font-size: 30px;
+    text-align: center;
+    margin: 10px;
+}
+.contener{
+    border: solid black 5px;
+    border-radius: 20%;
+    background-color: darkgoldenrod;
+    width: 1200px;
+    position: relative;
+    left: 45px;
+    margin-top: 15px;
+}
+.contenedor{  
+    display: flex;
+    justify-content: space-evenly;
+}
+.cont_descripcion{
+    display: flex;
+    justify-content: center;
+}
+.producto{
+    font-size: 22px;
+    padding: 10px;
+}
+
+.producto:hover{
+    color: yellow;
+}
+
+/*Footer*/
+.fondito{
+    background-color: black;
+    margin-top: 5px;
+}
+.pie_de_pagina{
+    color: yellow;
+    font-size: 18px;
+    margin: 5px;
+}
+.pie_de_pagina:hover{
+    color: darkgoldenrod;
+}
+.Div_final{
+    display: flex;
+    justify-content: space-between;
+}
+.Div_final_2{
+    display: flex;
+    justify-content: space-around;
+}

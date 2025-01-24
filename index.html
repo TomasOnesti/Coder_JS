@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador_Tienda_Virtual</title>
+    <link rel="stylesheet" href="./CSS/Estilos.css">
+</head>
+<body>
+    <header>
+        <h1 class="titulo">Tienda Virtual</h1>
+        <nav>
+            <ul class="barra_tag">
+                <button onclick="filtrar(productos)" class="boton_tag"><li class="tag">Filtrar_Productos</li></button>
+                <!-- <button class="boton_tag"><li class="tag">Chocolates</li></button>
+                <button class="boton_tag"><li class="tag">Alfajores</li></button>
+                <button class="boton_tag"><li class="tag">Golosinas</li></button> -->
+                <button onclick="agregar_producto()" class="boton_tag"><li class="tag">Agregar_Productos</li></button>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div>
+            <h2 class="subtitulo">Productos disponibles</h2>
+        </div>
+
+        <div class="contener">
+            <div class="contenedor">
+                <p class="producto" id="nombre">Oblea Cofler Chocolate</p>
+                <p class="producto" id="categoria">Chocolates</p>
+                <p class="producto" id="precio">1800$</p>    
+            </div>
+            <div class="cont_descripcion">
+                <p class="producto" id="descripcion">La oblea fina y el relleno de chocolate se combinan para crear una experiencia placentera y adictiva en cada mordisco.</p>
+            </div>
+        </div>
+
+        <div class="contener">
+            <div class="contenedor">
+                <p class="producto" id="nombre_2">Chocolate Milka</p>
+                <p class="producto" id="categoria_2">Chocolate</p>
+                <p class="producto" id="precio_2">2400$</p>    
+            </div>
+            <div class="cont_descripcion">
+                <p class="producto" id="descripcion_2">El chocolate Milka es mil veces más rico cuando lo compartimos. Gestos tiernos hay muchos, pero si los compartimos, habría muchísimos más.</p>
+            </div>
+        </div>
+
+        <div class="contener">
+            <div class="contenedor">
+                <p class="producto" id="nombre_3">Alfajor Havanna</p>
+                <p class="producto" id="categoria_3">Alfajor</p>
+                <p class="producto" id="precio_3">4500$</p>    
+            </div>
+            <div class="cont_descripcion">
+                <p class="producto" id="descripcion_3">Dos galletitas Rellenas con una deliciosa combinación de mucho dulce de leche, castañas de cajú y nueces, cubierta por una capa del más puro chocolate blanco</p>
+            </div>
+        </div>
+
+        <div class="contener">
+            <div class="contenedor">
+                <p class="producto" id="nombre_4">Capitan del espacio</p>
+                <p class="producto" id="categoria_4">Alfajor</p>
+                <p class="producto" id="precio_4">3200$</p>    
+            </div>
+            <div class="cont_descripcion">
+                <p class="producto" id="descripcion_4">Para su devotos consumidores, es el mejor alfajor del mundo. Es que Capitán del Espacio es mucho más que dos tapitas bañadas en chocolate y rellenas de dulce de leche. Más que una golosina es un objeto de culto, un símbolo del conurbano, un emblema de la infancia de miles con un gran capital nostálgico.</p>
+            </div>
+        </div>
+
+        <div class="contener">
+            <div class="contenedor">
+                <p class="producto" id="nombre_5">Caramelos frutales Billiken</p>
+                <p class="producto" id="categoria_5">Golosinas</p>
+                <p class="producto" id="precio_5">2000$</p>    
+            </div>
+            <div class="cont_descripcion">
+                <p class="producto" id="descripcion_5">SUMÁ BOLSITAS DE PAPEL EN COLORES LISOS A TU CARRITO</p>
+            </div>
+        </div>
+
+        <div class="contener">
+            <div class="contenedor">
+                <p class="producto" id="nombre_6">Gomitas Mogul</p>
+                <p class="producto" id="categoria_6">Golosinas</p>
+                <p class="producto" id="precio_6">1600$</p>    
+            </div>
+            <div class="cont_descripcion">
+                <p class="producto" id="descripcion_6">Disfruta de la variedad de sabores frutales en cada paquete de gomitas Mogul. Cada unidad trae una selección de dulces masticables con sabores inspirados en frutas, ideales para compartir o disfrutar en cualquier momento del día.</p>
+            </div>
+        </div>
+    </main>
+    <footer class="fondito">
+        <div class="Div_final">
+            <p class="pie_de_pagina">Creador: Tomas Onesti</p>
+            <p class="pie_de_pagina TYC">Terminos y condiciones</p>
+        </div>
+        <div class="Div_final_2">
+            <p class="pie_de_pagina">Instragram</p>
+            <p class="pie_de_pagina">Faceboock</p>
+            <p class="pie_de_pagina">Contacto:Email</p>
+        </div>
+        <script src="./JS/Funciones.js"></script>
+    </footer>
+</body>
+</html>
