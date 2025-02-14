@@ -1,5 +1,5 @@
 //Simulacion de una base de datos.
-//Conectar la base de datos con el html
+//Conectar la base de datos con el html.✓
 //Agregar nuevas funciones
 //Actualizar filtrado de productos
 const contenedor_card = document.getElementById("contenedor_card")
@@ -52,7 +52,7 @@ const productos = [
         precio:1600
     }
 ]
-
+//Mostrar los productos en la pagina por medio de DOM
 function productos_pagina(){
     productos.forEach(producto=>{
         const card = document.createElement("article")
@@ -67,7 +67,7 @@ function productos_pagina(){
             </div>
             <div class="cont_descripcion">
                 <p class="producto" id="descripcion">${producto.descripcion}</p>
-                <button class="boton">Comprar</button>
+                <button onclick ="agregarCarrito(${producto.Id})" class="boton">Comprar</button>
             </div>
         </div>
         `
@@ -77,9 +77,34 @@ function productos_pagina(){
 
 productos_pagina()
 
+//Carrito
 
+const Carrito=[]
+const lista = document.getElementById("lista")
+//Funcion para agregar productos al carrito
+function agregarCarrito(Id){
+    const Producto = productos.find(producto=> producto.Id === Id)
+    Carrito.push(Producto)
+    verCarrito()
+}
 
+//Funcion para mostrar los productos del carrito
+function verCarrito(){
+    lista.innerHTML="";
 
+    Carrito.forEach((producto, index)=>{
+
+        const item = document.createElement("li");
+
+        item.innerHTML=`
+            ${producto.nombre} = ${producto.precio}
+            ${producto.categoria}
+            ${producto.descripcion}
+        `
+        lista.appendChild(item)
+    })
+    
+}
 //Funcion para filtrar los productos almacenados por consola(esta conectado a un boton para ser ejecutado)
 function filtrar(productos){
 
