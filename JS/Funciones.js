@@ -1,5 +1,8 @@
 //Simulacion de una base de datos.
-//Tabla donde se almacenan los productos de la pagina(no esta conectado con el html.)
+//Conectar la base de datos con el html
+//Agregar nuevas funciones
+//Actualizar filtrado de productos
+const contenedor_card = document.getElementById("contenedor_card")
 const productos = [
     {
         Id: 1,
@@ -36,7 +39,7 @@ const productos = [
     {
         Id: 5,
         nombre: "Caramelos_Billiken",
-        descripcion:"SUMÁ BOLSITAS DE PAPEL EN COLORES LISOS A TU CARRITO",
+        descripcion:"Caramelos Billiken masticables y vienen en sabores frutales y de yogur. Ideales para compartir y disfrutar en cualquier momento del día.",
         categoria:"Golosina",
         precio:2000
     },
@@ -50,7 +53,33 @@ const productos = [
     }
 ]
 
-console.log(productos)
+function productos_pagina(){
+    productos.forEach(producto=>{
+        const card = document.createElement("article")
+        card.classList.add("card")
+
+        card.innerHTML=`
+        <div class="contener">
+            <div class="contenedor">
+                <p class="producto" id="nombre">${producto.nombre}</p>
+                <p class="producto" id="categoria">${producto.categoria}</p>
+                <p class="producto" id="precio">${producto.precio}</p>    
+            </div>
+            <div class="cont_descripcion">
+                <p class="producto" id="descripcion">${producto.descripcion}</p>
+                <button class="boton">Comprar</button>
+            </div>
+        </div>
+        `
+        contenedor_card.appendChild(card)
+    })
+}
+
+productos_pagina()
+
+
+
+
 //Funcion para filtrar los productos almacenados por consola(esta conectado a un boton para ser ejecutado)
 function filtrar(productos){
 
@@ -73,7 +102,7 @@ function filtrar(productos){
     } 
 }
  
-//Funcion para agregar productos, solo funciona por consola (esta conectado a un boton para ser ejecutado, solo puede agregar un producto)
+//Funcion para agregar productos (esta conectado a un boton para ser ejecutado, solo puede agregar un producto)
 function agregar_producto(){
     productos.push({
         id:prompt("id del producto"),

@@ -58,7 +58,19 @@ header{
 }
 .cont_descripcion{
     display: flex;
-    justify-content: center;
+    justify-content: end;
+}
+
+.boton{
+    width: 70px;
+    height: 40px;
+    border: solid black 2px;
+    border-radius: 100%;
+    font-size: 15px;
+    background-color: darkgoldenrod;
+}
+.boton:hover{
+    color: green;
 }
 .producto{
     font-size: 22px;
@@ -68,6 +80,8 @@ header{
 .producto:hover{
     color: yellow;
 }
+
+
 
 /*Footer*/
 .fondito{
