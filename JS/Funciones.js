@@ -59,9 +59,9 @@ function productos_pagina(){
         card.innerHTML=`
         <div class="contener">
             <div class="contenedor">
-                <p class="producto" id="nombre">${producto.nombre}</p>
-                <p class="producto" id="categoria">${producto.categoria}</p>
-                <p class="producto" id="precio">${producto.precio}$</p>    
+                <p class="producto" id="nombre">Producto: ${producto.nombre}</p>
+                <p class="producto" id="categoria">Categoria: ${producto.categoria}</p>
+                <p class="producto" id="precio">Precio: ${producto.precio}$</p>    
             </div>
             <div class="cont_descripcion">
                 <p class="producto" id="descripcion">${producto.descripcion}</p>
@@ -94,11 +94,11 @@ function verCarrito(){
         item.innerHTML=`
             <div class="contenerC">
                 <div class="contenedorC">
-                    <p class="productoC" id="nombre">${producto.nombre}</p>
-                    <p class="productoC" id="precio">${producto.precio}$</p>    
+                    <p class="productoC" id="nombre">Producto: ${producto.nombre}</p>
+                    <p class="productoC" id="precio">Precio: ${producto.precio}$</p>    
                 </div>
                 <div class="contenedorCa">
-                <p class="productoC" id="categoria">${producto.categoria}</p>
+                <p class="productoC" id="categoria">Categoria: ${producto.categoria}</p>
                 </div>
                 <div class="cont_descripcionC">
                     <p class="productoC" id="descripcion">${producto.descripcion}</p>
