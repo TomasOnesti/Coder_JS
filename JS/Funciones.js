@@ -1,7 +1,5 @@
 //Simulacion de una base de datos.
-//Conectar la base de datos con el html.✓
-//Agregar nuevas funciones
-//Actualizar filtrado de productos
+
 const contenedor_card = document.getElementById("contenedor_card")
 const productos = [
     {
@@ -57,7 +55,7 @@ function productos_pagina(){
     productos.forEach(producto=>{
         const card = document.createElement("article")
         card.classList.add("card")
-
+        
         card.innerHTML=`
         <div class="contener">
             <div class="contenedor">
@@ -74,67 +72,42 @@ function productos_pagina(){
         contenedor_card.appendChild(card)
     })
 }
-
 productos_pagina()
 
 //Carrito
-
 const Carrito=[]
 const lista = document.getElementById("lista")
 //Funcion para agregar productos al carrito
 function agregarCarrito(Id){
-    const Producto = productos.find(producto=> producto.Id === Id)
+    const Producto = productos.find(producto=> producto.Id === Id) 
     Carrito.push(Producto)
     verCarrito()
 }
-
 //Funcion para mostrar los productos del carrito
 function verCarrito(){
     lista.innerHTML="";
 
     Carrito.forEach((producto, index)=>{
-
+        const total = Carrito.reduce((acumulador,productos)=> acumulador + productos.precio, 0)
         const item = document.createElement("li");
 
         item.innerHTML=`
-            ${producto.nombre} = ${producto.precio}
-            ${producto.categoria}
-            ${producto.descripcion}
+            <div class="contenerC">
+                <div class="contenedorC">
+                    <p class="productoC" id="nombre">${producto.nombre}</p>
+                    <p class="productoC" id="precio">${producto.precio}$</p>    
+                </div>
+                <div class="contenedorCa">
+                <p class="productoC" id="categoria">${producto.categoria}</p>
+                </div>
+                <div class="cont_descripcionC">
+                    <p class="productoC" id="descripcion">${producto.descripcion}</p>
+                    <p class="productoC">Total ${total}$</p>
+                </div>
+            </div>
         `
+        
         lista.appendChild(item)
     })
     
 }
-//Funcion para filtrar los productos almacenados por consola(esta conectado a un boton para ser ejecutado)
-function filtrar(productos){
-
-    const producto_filtrado = [];
-    const alfajores = [];
-    const chocolates = [];
-    for( let i = 0; i < productos.length; i++){
-        if(productos[i].categoria === "Golosina"){
-            producto_filtrado.push(productos[i])
-            console.log(producto_filtrado)
-        }else{
-            if(productos[i].categoria === "Alfajor"){
-                alfajores.push(productos[i])
-                console.log(alfajores)
-            }else{
-                chocolates.push(productos[i])
-                console.log(chocolates)
-            }
-        }
-    } 
-}
- 
-//Funcion para agregar productos (esta conectado a un boton para ser ejecutado, solo puede agregar un producto)
-function agregar_producto(){
-    productos.push({
-        id:prompt("id del producto"),
-        nombre:prompt("nombre del producto"),
-        descripcion:prompt("descripcion del producto"),
-        categoria:prompt("categoria del producto"),
-        precio:prompt("precio del producto")
-    })
-}
-

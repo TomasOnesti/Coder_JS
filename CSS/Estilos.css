@@ -81,8 +81,33 @@ header{
     color: yellow;
 }
 
+/*Carrito*/
 
+.contenerC{
+    border: solid black 5px;
+    border-radius: 20%;
+    background-color: skyblue;
+    width: 1000px;
+    height: 200px;
+    position: relative;
+    left: 150px;
+    margin-top: 15px;
+}
+.contenedorC{  
+    display: flex;
+    justify-content: space-evenly;
+}
+.contenedorCa{  
+    margin: 2px;
+}
+.cont_descripcionC{
+    position: relative;
+    left: 10px;
+}
 
+.productoC{
+    font-size: 24px;
+}
 /*Footer*/
 .fondito{
     background-color: black;
