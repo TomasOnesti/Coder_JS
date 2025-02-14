@@ -4,7 +4,7 @@ const contenedor_card = document.getElementById("contenedor_card")
 const productos = [
     {
         Id: 1,
-        nombre: "Oblea_Cofler_Chocolate",
+        nombre: "Oblea Cofler Chocolate",
         descripcion:"La oblea fina y el relleno de chocolate se combinan para crear una experiencia placentera y adictiva en cada mordisco.",
         categoria:"Chocolate",
         precio:1800
@@ -12,7 +12,7 @@ const productos = [
 
     {
         Id: 2,
-        nombre: "Chocolate_milka",
+        nombre: "Chocolate milka",
         descripcion:"El chocolate Milka es mil veces más rico cuando lo compartimos. Gestos tiernos hay muchos, pero si los compartimos, habría muchísimos más.",
         categoria:"Chocolate",
         precio:2400
@@ -20,7 +20,7 @@ const productos = [
 
     {
         Id: 3,
-        nombre: "Alfajor_Havanna",
+        nombre: "Alfajor Havanna",
         descripcion:"Dos galletitas Rellenas con una deliciosa combinación de mucho dulce de leche, castañas de cajú y nueces, cubierta por una capa del más puro chocolate blanco",
         categoria:"Alfajor",
         precio:4500
@@ -28,7 +28,7 @@ const productos = [
 
     {
         Id: 4,
-        nombre: "Alfajor_Capitan_Del_Espacio",
+        nombre: "Alfajor Capitan Del Espacio",
         descripcion:"Para su devotos consumidores, es el mejor alfajor del mundo. Es que Capitán del Espacio es mucho más que dos tapitas bañadas en chocolate y rellenas de dulce de leche. Más que una golosina es un objeto de culto, un símbolo del conurbano, un emblema de la infancia de miles con un gran capital nostálgico.",
         categoria:"Alfajor",
         precio:3200
@@ -36,7 +36,7 @@ const productos = [
 
     {
         Id: 5,
-        nombre: "Caramelos_Billiken",
+        nombre: "Caramelos Billiken",
         descripcion:"Caramelos Billiken masticables y vienen en sabores frutales y de yogur. Ideales para compartir y disfrutar en cualquier momento del día.",
         categoria:"Golosina",
         precio:2000
@@ -44,7 +44,7 @@ const productos = [
 
     {
         Id: 6,
-        nombre: "Gomitas_Mogul",
+        nombre: "Gomitas Mogul",
         descripcion:"Disfruta de la variedad de sabores frutales en cada paquete de gomitas Mogul. Cada unidad trae una selección de dulces masticables con sabores inspirados en frutas, ideales para compartir o disfrutar en cualquier momento del día.",
         categoria:"Golosina",
         precio:1600
@@ -61,7 +61,7 @@ function productos_pagina(){
             <div class="contenedor">
                 <p class="producto" id="nombre">${producto.nombre}</p>
                 <p class="producto" id="categoria">${producto.categoria}</p>
-                <p class="producto" id="precio">${producto.precio}</p>    
+                <p class="producto" id="precio">${producto.precio}$</p>    
             </div>
             <div class="cont_descripcion">
                 <p class="producto" id="descripcion">${producto.descripcion}</p>
@@ -102,7 +102,7 @@ function verCarrito(){
                 </div>
                 <div class="cont_descripcionC">
                     <p class="productoC" id="descripcion">${producto.descripcion}</p>
-                    <p class="productoC">Total ${total}$</p>
+                    <p class="productoC total">Total ${total}$</p>
                 </div>
             </div>
         `

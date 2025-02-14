@@ -71,6 +71,7 @@ header{
 }
 .boton:hover{
     color: green;
+    background-color: greenyellow;
 }
 .producto{
     font-size: 22px;
@@ -107,6 +108,15 @@ header{
 
 .productoC{
     font-size: 24px;
+}
+
+.total{
+    display: flex;
+    justify-content: center;
+}
+.total:hover{
+    color: green;
+    font-size: 36px;
 }
 /*Footer*/
 .fondito{
