@@ -3,6 +3,11 @@
     padding: 0;
 }
 
+@font-face{
+    font-family: 'Letra';
+    src: url(/Fuente/optimusprinceps/OptimusPrinceps.ttf);
+}
+
 html{
     background-color: aliceblue;
 }
@@ -75,11 +80,17 @@ header{
 }
 .producto{
     font-size: 22px;
-    padding: 10px;
+    font-family: 'Letra';
 }
 
 .producto:hover{
     color: yellow;
+}
+
+.img{
+    width: 12rem;
+    padding: 0;
+    margin: 0;
 }
 
 /*Carrito*/
@@ -108,6 +119,7 @@ header{
 
 .productoC{
     font-size: 24px;
+    font-family: 'Letra';
 }
 
 .total{
@@ -118,6 +130,14 @@ header{
     color: green;
     font-size: 36px;
 }
+
+/*BotonJS*/
+
+.mi-boton{
+    font-family: 'Letra';
+}
+
+
 /*Footer*/
 .fondito{
     background-color: black;

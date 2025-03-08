@@ -7,7 +7,8 @@ const productos = [
         nombre: "Oblea Cofler Chocolate",
         descripcion:"La oblea fina y el relleno de chocolate se combinan para crear una experiencia placentera y adictiva en cada mordisco.",
         categoria:"Chocolate",
-        precio:1800
+        precio:1800,
+        img:"Img/Cofler_chocolate.png"
     },
 
     {
@@ -82,6 +83,24 @@ function agregarCarrito(Id){
     const Producto = productos.find(producto=> producto.Id === Id) 
     Carrito.push(Producto)
     verCarrito()
+    const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 2000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.onmouseenter = Swal.stopTimer;
+          toast.onmouseleave = Swal.resumeTimer;
+        }
+      });
+      Toast.fire({
+        icon: "success",
+        title: "Producto agregado",
+        customClass:{
+            title:"mi-boton"
+        }
+      });
 }
 //Funcion para mostrar los productos del carrito
 function verCarrito(){
@@ -102,12 +121,11 @@ function verCarrito(){
                 </div>
                 <div class="cont_descripcionC">
                     <p class="productoC" id="descripcion">${producto.descripcion}</p>
-                    <p class="productoC total">Total ${total}$</p>
+                    <p class="productoC total">Total: ${total}$</p>
                 </div>
             </div>
         `
         
         lista.appendChild(item)
     })
-    
 }
